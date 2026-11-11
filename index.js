@@ -8,21 +8,21 @@ function verificarToken(token, tempo) {
   return "SESSAO_ATIVA";
 }
 const token1 = "valido123";
-const token2 = " "
+const token2 = " ";
 const tempo1 = 30;
-const tempo2 = 0
+const tempo2 = 0;
 if (verificarToken(token1, tempo1) === "SESSAO_ATIVA") {
   console.log("Teste 1 Passou ATIVA");
 } else {
   console.log("Teste 1 Não Passou ATIVA");
 }
-if(verificarToken(token2, tempo1) === "TOKEN_AUSENTE"){
+if (verificarToken(token2, tempo1) === "TOKEN_AUSENTE") {
   console.log("Teste 1 Passou AUSENTE");
 } else {
   console.log("Teste 1 Não Passou AUSENTE");
 }
-if(verificarToken(token1, tempo2) === "SESSAO_EXPIRADA"){
-    console.log("Teste 1 Passou EXPIRADO");
+if (verificarToken(token1, tempo2) === "SESSAO_EXPIRADA") {
+  console.log("Teste 1 Passou EXPIRADO");
 } else {
   console.log("Teste 1 Não Passou EXPIRADO");
 }
@@ -57,15 +57,6 @@ if (calcularFrete(peso, estado2) === 1075) {
   console.log("Teste 2 Não Passou SP");
 }
 
-function formatador(cpf) {
-  return cpf.replaceAll(/[.-]/g, "");
-}
-const cpf = "123.123.123-23";
-if (formatador(cpf) === "12312312323") {
-  console.log("Teste 3 Passou CPF");
-} else {
-  console.log("Teste 3 Não Passou CPF");
-}
 function autorizacao(pessoa) {
   if (pessoa.ativo === false) {
     return "ACESSO_NEGADO";
